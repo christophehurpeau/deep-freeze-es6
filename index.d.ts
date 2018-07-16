@@ -1,2 +1,6 @@
 declare function deepFreeze<T>(obj: T): T;
-export default deepFreeze;
+
+declare namespace deepFreeze {
+}
+
+export = deepFreeze;
