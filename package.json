@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
-  "homepage": "https://github.com/christophehurpeau/deep-freeze-es6#readme"
+  "scripts": {
+    "test-typings": "tsc -p typings/tsconfig.json"
+  },
+  "homepage": "https://github.com/christophehurpeau/deep-freeze-es6#readme",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
 }
