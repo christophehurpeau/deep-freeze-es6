@@ -24,4 +24,4 @@ module.exports = function deepFreeze(obj) {
     return obj;
 }
 
-module.exports.default = module.exports;
+module.exports.default = deepFreeze;
