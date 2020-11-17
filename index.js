@@ -1,4 +1,4 @@
-module.exports = function deepFreeze(obj) {
+function deepFreeze(obj) {
     if (obj instanceof Map) {
         obj.clear = obj.delete = obj.set = function () {
             throw new Error('map is read-only');
@@ -24,4 +24,5 @@ module.exports = function deepFreeze(obj) {
     return obj;
 }
 
+module.exports = deepFreeze;
 module.exports.default = deepFreeze;
