@@ -1,6 +1,6 @@
 {
   "name": "deep-freeze-es6",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "deep freeze, works with Map and Set",
   "main": "index.js",
   "typings": "index.d.ts",
