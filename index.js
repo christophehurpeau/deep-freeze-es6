@@ -14,9 +14,10 @@ function deepFreeze(obj) {
 
     Object.getOwnPropertyNames(obj).forEach(function (name) {
         var prop = obj[name];
+        var type = typeof prop;
 
-        // Freeze prop if it is an object
-        if (typeof prop == 'object' && !Object.isFrozen(prop)) {
+        // Freeze prop if it is an object or function and also not already frozen
+        if ((type === 'object' || type === 'function') && !Object.isFrozen(prop)) {
             deepFreeze(prop);
         }
     });
