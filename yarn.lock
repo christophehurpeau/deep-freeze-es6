@@ -1031,21 +1031,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:49.4.0":
-  version: 49.4.0
-  resolution: "@pob/eslint-config@npm:49.4.0"
+"@pob/eslint-config@npm:50.0.0":
+  version: 50.0.0
+  resolution: "@pob/eslint-config@npm:50.0.0"
   dependencies:
-    "@pob/use-eslint-plugin": 49.4.0
+    "@pob/use-eslint-plugin": 50.0.0
     eslint-config-airbnb-base: ^15.0.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-import: ^2.25.3
     eslint-plugin-node: ^11.1.0
-    eslint-plugin-unicorn: ^43.0.0
+    eslint-plugin-unicorn: ^44.0.0
   peerDependencies:
-    eslint: ^8.18.0
+    eslint: ^8.23.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-node: ^11.1.0
-    eslint-plugin-unicorn: ^43.0.0
+    eslint-plugin-unicorn: ^44.0.0
   peerDependenciesMeta:
     eslint-plugin-import:
       optional: true
@@ -1053,7 +1053,7 @@ __metadata:
       optional: true
     eslint-plugin-unicorn:
       optional: true
-  checksum: 1e1cf6d02365b21ec59983f4978336cf258b19cfc64a79abd9ec06d6b35668954bf506a36b9f6d5894e56175e98968d6a9f2999f0069ca7275c84cb21b3aa1af
+  checksum: 1010817c7834d4746317f12387a243a18faf05fed754c430b1964c953b815e8559000dd2a68ab7aa16544cb105a542332cf613974b6d80a619a7d5e157f971db
   languageName: node
   linkType: hard
 
@@ -1134,10 +1134,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/use-eslint-plugin@npm:49.4.0":
-  version: 49.4.0
-  resolution: "@pob/use-eslint-plugin@npm:49.4.0"
-  checksum: b1123f734f5c0ed3474515c5bad8d7bb040429beb667cd9188ea3030d05fce50b8d66ff928aea0b3f4eadc31469ee7e87f15007a239b926ec7e1d495eb162f08
+"@pob/use-eslint-plugin@npm:50.0.0":
+  version: 50.0.0
+  resolution: "@pob/use-eslint-plugin@npm:50.0.0"
+  checksum: 7b8dea3ca2fcbd5d3c574b2dd873e67c41a16c584be0f58ccc4d0c9331e216dbe5ed5c0223d98c8a4f0fa94b5a4c0a6450f83aa351de8ceb482cda0c30516765
   languageName: node
   linkType: hard
 
@@ -1879,10 +1879,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^3.2.0, ci-info@npm:^3.3.2":
-  version: 3.6.1
-  resolution: "ci-info@npm:3.6.1"
-  checksum: e463ed7152e795467c298268d58974d5e769fc7a0da2f72a53480042e01809e87908544b883a073391f446f46045b0d656c4a1fda3796c93740cd2be1c2d5f6f
+"ci-info@npm:^3.2.0, ci-info@npm:^3.4.0":
+  version: 3.6.2
+  resolution: "ci-info@npm:3.6.2"
+  checksum: fd8fc172f925208d17ca8473e05e9e5709c796d31ee23fa0b53f418bc449c237e9c031a55c161102afb4e69ef34ce6f6a5d421886ce087478b222a5c7b9ae1f3
   languageName: node
   linkType: hard
 
@@ -2209,7 +2209,7 @@ __metadata:
   resolution: "deep-freeze-es6@workspace:."
   dependencies:
     "@pob/commitlint-config": 5.1.0
-    "@pob/eslint-config": 49.4.0
+    "@pob/eslint-config": 50.0.0
     "@pob/root": 7.2.0
     "@types/jest": 29.2.3
     check-package-dependencies: 3.10.0
@@ -2550,17 +2550,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^43.0.0":
-  version: 43.0.2
-  resolution: "eslint-plugin-unicorn@npm:43.0.2"
+"eslint-plugin-unicorn@npm:^44.0.0":
+  version: 44.0.2
+  resolution: "eslint-plugin-unicorn@npm:44.0.2"
   dependencies:
-    "@babel/helper-validator-identifier": ^7.18.6
-    ci-info: ^3.3.2
+    "@babel/helper-validator-identifier": ^7.19.1
+    ci-info: ^3.4.0
     clean-regexp: ^1.0.0
     eslint-utils: ^3.0.0
     esquery: ^1.4.0
     indent-string: ^4.0.0
-    is-builtin-module: ^3.1.0
+    is-builtin-module: ^3.2.0
     lodash: ^4.17.21
     pluralize: ^8.0.0
     read-pkg-up: ^7.0.1
@@ -2569,8 +2569,8 @@ __metadata:
     semver: ^7.3.7
     strip-indent: ^3.0.0
   peerDependencies:
-    eslint: ">=8.18.0"
-  checksum: 1b63eb013cbc0b3c9ef131a1e049b4b53d8e208393675d5f97d3fa83c050ebcb695a7fd210f4de1460f42f89c2ecca261280488834591d5c21e146d297a9ee2e
+    eslint: ">=8.23.1"
+  checksum: b0ed6b3a60e36efab5b19a0e2a1ea4e4faba79ef315aa1eff9bdebaf28b70ada059837a0a4cdf20e0b678d8eee6155afc2c6300d0ff7d51b68eced4f0bcb56e0
   languageName: node
   linkType: hard
 
@@ -3381,7 +3381,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-builtin-module@npm:^3.1.0":
+"is-builtin-module@npm:^3.2.0":
   version: 3.2.0
   resolution: "is-builtin-module@npm:3.2.0"
   dependencies:
