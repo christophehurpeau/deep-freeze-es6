@@ -8,19 +8,57 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [16.x, 18.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
-        run: yarn install --prefer-offline --pure-lockfile
+        run: yarn install --immutable --immutable-cache
 
-      - name: Test typings
-        run: npm run test-typings
-        if: startsWith(matrix.node-version, '12.')
+      - name: Checks
+        run: yarn run checks
+
+      - name: Prettier
+        run: yarn run lint:prettier
+        if: startsWith(matrix.node-version, '18.')
+
+      - name: Eslint
+        run: yarn run lint:eslint
+        if: startsWith(matrix.node-version, '18.')
+
+      - name: Generate Test Coverage
+        run: yarn run test --coverage --coverageReporters=json --coverageReporters=text
+        if: startsWith(matrix.node-version, '18.')
+        env:
+          CI: true
+
+      - name: Send results to codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+        if: startsWith(matrix.node-version, '18.')
+
+      - name: Check nothing was forgotten before commit
+        if: startsWith(matrix.node-version, '18.')
+        run: yarn run repository-check-dirty
+
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        if: ${{ startsWith(matrix.node-version, '18.') && github.ref == 'refs/heads/main' }}
+        id: release
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          release-type: node
+          package-name: release-please-action
+
+      # publish:
+      - run: npm publish
+        if: ${{ startsWith(matrix.node-version, '18.') && github.ref == 'refs/heads/main' && steps.release.outputs.release_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

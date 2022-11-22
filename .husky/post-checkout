@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+if [ -n "$(git diff HEAD@{1}..HEAD@{0} -- yarn.lock)" ]; then
+  yarn install --immutable --immutable-cache || true
+fi

@@ -1,0 +1,30 @@
+name: "Create documentation and deploy to Github pages"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-documentation-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: yarn install --immutable --immutable-cache
+
+      - name: Generate Coverage
+        run: yarn test --coverage --coverageReporters=lcov --coverageDirectory=docs/coverage/
+
+      - name: Create nojekyll
+        run: touch docs/.nojekyll
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

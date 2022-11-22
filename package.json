@@ -2,12 +2,6 @@
   "name": "deep-freeze-es6",
   "version": "1.4.1",
   "description": "deep freeze, works with Map and Set",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/christophehurpeau/deep-freeze-es6.git"
-  },
   "keywords": [
     "freeze",
     "deep-freeze",
@@ -16,14 +10,60 @@
   ],
   "author": "Christophe Hurpeau <christophe@hurpeau.com> (http://christophe.hurpeau.com/)",
   "license": "ISC",
+  "repository": "https://github.com/christophehurpeau/deep-freeze-es6.git",
+  "homepage": "https://github.com/christophehurpeau/deep-freeze-es6#readme",
   "bugs": {
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
-  "scripts": {
-    "test-typings": "tsc -p typings/tsconfig.json"
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
   },
-  "homepage": "https://github.com/christophehurpeau/deep-freeze-es6#readme",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "checks": "node scripts/check-package.js",
+    "clean:build": "true",
+    "lint": "yarn run lint:prettier && yarn run lint:eslint",
+    "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} lib",
+    "lint:prettier": "pob-root-prettier --check .",
+    "lint:prettier:fix": "pob-root-prettier --write .",
+    "postinstallDev": "pob-root-postinstall",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test-typings": "tsc -p typings/tsconfig.json",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
+  },
+  "prettier": "@pob/root/prettier-config",
+  "commitlint": {
+    "extends": [
+      "@pob/commitlint-config"
+    ]
+  },
+  "jest": {
+    "cacheDirectory": "./node_modules/.cache/jest",
+    "testMatch": [
+      "<rootDir>/lib/**/__tests__/**/*.?(m)js",
+      "<rootDir>/lib/**/*.test.?(m)js"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.?(m)js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "extensionsToTreatAsEsm": [],
+    "testEnvironment": "node"
+  },
+  "pob": {},
   "devDependencies": {
-    "typescript": "4.0.5"
+    "@pob/commitlint-config": "5.1.0",
+    "@pob/eslint-config": "49.4.0",
+    "@pob/root": "7.2.0",
+    "@types/jest": "29.2.3",
+    "check-package-dependencies": "3.10.0",
+    "eslint": "8.28.0",
+    "jest": "29.3.1"
   }
 }

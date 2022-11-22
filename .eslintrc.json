@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@pob/eslint-config/root-module"]
+}
