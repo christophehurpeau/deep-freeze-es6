@@ -59,7 +59,7 @@
   "pob": {},
   "devDependencies": {
     "@pob/commitlint-config": "5.1.0",
-    "@pob/eslint-config": "49.4.0",
+    "@pob/eslint-config": "50.0.0",
     "@pob/root": "7.2.0",
     "@types/jest": "29.2.3",
     "check-package-dependencies": "3.10.0",
