@@ -1865,9 +1865,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"check-package-dependencies@npm:6.1.0":
-  version: 6.1.0
-  resolution: "check-package-dependencies@npm:6.1.0"
+"check-package-dependencies@npm:6.2.0":
+  version: 6.2.0
+  resolution: "check-package-dependencies@npm:6.2.0"
   dependencies:
     chalk: ^5.2.0
     glob: ^8.0.0
@@ -1877,7 +1877,7 @@ __metadata:
     type-fest: ^3.0.0
   bin:
     check-package-dependencies: bin/check-package-dependencies.js
-  checksum: a28921a784541d9a54ad61b7edcc2ae0c216a5f7f5f7a95f8c165f6f77d171143f5213b3f2dd9116d2bab4d0a74acca84698e4370fba6649d5d4e4e2b6d35c8f
+  checksum: 9c19f78449871d1446ae0fcf96270a45eb78c20adc494c17c1f716988a3d7897ac0b89bf34bb20afdd202252c454792658ab61210be83276a9634ee5ae3ca321
   languageName: node
   linkType: hard
 
@@ -2221,7 +2221,7 @@ __metadata:
     "@pob/eslint-config": 50.0.0
     "@pob/root": 7.2.0
     "@types/jest": 29.4.0
-    check-package-dependencies: 6.1.0
+    check-package-dependencies: 6.2.0
     eslint: 8.32.0
     jest: 29.4.1
   languageName: unknown
