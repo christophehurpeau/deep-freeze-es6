@@ -1048,12 +1048,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/commitlint-config@npm:5.1.0":
-  version: 5.1.0
-  resolution: "@pob/commitlint-config@npm:5.1.0"
+"@pob/commitlint-config@npm:5.1.1":
+  version: 5.1.1
+  resolution: "@pob/commitlint-config@npm:5.1.1"
   dependencies:
     "@commitlint/config-conventional": ^17.2.0
-  checksum: 624eee3353f2320bb762749c5148ad14df5a2f271a27fe5983742d3e41a1c4c2d9632484d8fd10e9dd32d8e5ae6d55898f731be1d5e0d923e9ecb870bd93a221
+  checksum: b6f2474dd14c7048e8facc45d2c068a1ad38d96ca263c208311464db2f38457063a9254310aa4714d3434b13492e3b7cf4290b074eff2e5c7807430656ef4db3
   languageName: node
   linkType: hard
 
@@ -2239,7 +2239,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "deep-freeze-es6@workspace:."
   dependencies:
-    "@pob/commitlint-config": 5.1.0
+    "@pob/commitlint-config": 5.1.1
     "@pob/eslint-config": 50.0.0
     "@pob/root": 7.5.0
     "@types/jest": 29.4.1
@@ -6135,11 +6135,11 @@ __metadata:
 
 "typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8f6260acc86b56bfdda6004bc53f32ea548f543e8baef7071c8e34d29d292f3e375c8416556c8de10b24deef6933cd1c16a8233dc84a3dd43a13a13265d0faab
+  checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
   languageName: node
   linkType: hard
 
