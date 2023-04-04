@@ -1057,13 +1057,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:50.0.1":
-  version: 50.0.1
-  resolution: "@pob/eslint-config@npm:50.0.1"
+"@pob/eslint-config@npm:50.0.4":
+  version: 50.0.4
+  resolution: "@pob/eslint-config@npm:50.0.4"
   dependencies:
-    "@pob/use-eslint-plugin": 50.0.0
     eslint-config-airbnb-base: ^15.0.0
-    eslint-config-prettier: ^8.7.0
+    eslint-config-prettier: ^8.8.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-node: ^11.1.0
     eslint-plugin-unicorn: ^46.0.0
@@ -1079,7 +1078,7 @@ __metadata:
       optional: true
     eslint-plugin-unicorn:
       optional: true
-  checksum: 1edc02d5a1374193f5f2da35d920105721eb843b4c3ddcf2c204b4fe6404bb9216efc7d0a0f6f506ca8fbe61712614b2def28bae80d7f75950de3f868c94caa5
+  checksum: 718e685974d037685efb6e4189e83a8dd59c746b8e078b288d5e26f600f366b6127fd73f2556aff38a0a0a78d9484297cac763a9cbe96f0bc1a17cc0bf234453
   languageName: node
   linkType: hard
 
@@ -1158,13 +1157,6 @@ __metadata:
   dependencies:
     "@pob/sort-object": 5.1.1
   checksum: 508ddc4d943dd6764d767cdd6237e4e6a3c2b4e4fcd6fc16a710fdf0ee45f7b95a8052c38f6cc4eeabde943cc90a3b00011d898604f4626e253aa42e51a8a5e4
-  languageName: node
-  linkType: hard
-
-"@pob/use-eslint-plugin@npm:50.0.0":
-  version: 50.0.0
-  resolution: "@pob/use-eslint-plugin@npm:50.0.0"
-  checksum: 7b8dea3ca2fcbd5d3c574b2dd873e67c41a16c584be0f58ccc4d0c9331e216dbe5ed5c0223d98c8a4f0fa94b5a4c0a6450f83aa351de8ceb482cda0c30516765
   languageName: node
   linkType: hard
 
@@ -2240,7 +2232,7 @@ __metadata:
   resolution: "deep-freeze-es6@workspace:."
   dependencies:
     "@pob/commitlint-config": 5.1.1
-    "@pob/eslint-config": 50.0.1
+    "@pob/eslint-config": 50.0.4
     "@pob/root": 7.6.1
     "@types/jest": 29.5.0
     check-package-dependencies: 6.3.1
@@ -2517,7 +2509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.7.0":
+"eslint-config-prettier@npm:^8.8.0":
   version: 8.8.0
   resolution: "eslint-config-prettier@npm:8.8.0"
   peerDependencies:
