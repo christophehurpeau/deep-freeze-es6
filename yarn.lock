@@ -410,12 +410,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:17.5.1":
-  version: 17.5.1
-  resolution: "@commitlint/cli@npm:17.5.1"
+"@commitlint/cli@npm:17.6.1":
+  version: 17.6.1
+  resolution: "@commitlint/cli@npm:17.6.1"
   dependencies:
     "@commitlint/format": ^17.4.4
-    "@commitlint/lint": ^17.4.4
+    "@commitlint/lint": ^17.6.1
     "@commitlint/load": ^17.5.0
     "@commitlint/read": ^17.5.1
     "@commitlint/types": ^17.4.4
@@ -426,7 +426,7 @@ __metadata:
     yargs: ^17.0.0
   bin:
     commitlint: cli.js
-  checksum: 2bdd26b3215796dccb16b0d7459d3b0db7f6324800aa73b97a8cdf79b77f3691d85ee88f37fa6cf20c97ac664f31dcb6ad7aef1da3c3b32d7bb12f18d49a37f2
+  checksum: ec559e1f529c8bdc680d71527d2eb591dc7d264fcc8a70cf7ee12d5b833c385374ae41943f7a8e8346423c51f8900dded5041b6e719586295573882e366c41ba
   languageName: node
   linkType: hard
 
@@ -490,15 +490,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/lint@npm:17.4.4"
+"@commitlint/lint@npm:^17.6.1":
+  version: 17.6.1
+  resolution: "@commitlint/lint@npm:17.6.1"
   dependencies:
     "@commitlint/is-ignored": ^17.4.4
     "@commitlint/parse": ^17.4.4
-    "@commitlint/rules": ^17.4.4
+    "@commitlint/rules": ^17.6.1
     "@commitlint/types": ^17.4.4
-  checksum: bf04a9f9a1435e0d3cd03c58b6bf924613d0278b66b0a5d0e18eb96c7af9eeb02871e739a4d7d9312b2b4178f6f8ae9a49ba74382b4e28f623e1bf0af7067946
+  checksum: 990f6940fe277f252087e1d11d1042cfc034fa66b6355d451a0d7d8a24a0f0c381fd88f03556edb9a187c19e6d2a22a575b10c8d6db2f8342578c06396f10285
   languageName: node
   linkType: hard
 
@@ -569,16 +569,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/rules@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/rules@npm:17.4.4"
+"@commitlint/rules@npm:^17.6.1":
+  version: 17.6.1
+  resolution: "@commitlint/rules@npm:17.6.1"
   dependencies:
     "@commitlint/ensure": ^17.4.4
     "@commitlint/message": ^17.4.2
     "@commitlint/to-lines": ^17.4.0
     "@commitlint/types": ^17.4.4
     execa: ^5.0.0
-  checksum: f36525f6e234df6a17d47457b733a1fc10e3e01db1aa6fb45b18cbaf74b7915f634ab65f73d2412787137c366046f8264126c2f21ad9023ac6b68ec8b1cee8f4
+  checksum: e00b453e8a66eee6a335223a67cb328943133c54a9b416a7700857a917ea5ab3a6394c6c37e6123a8244bc2625e765c0f7182b7dfc2d4dee94577bb300d6d3a0
   languageName: node
   linkType: hard
 
@@ -1107,18 +1107,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/root@npm:7.7.0":
-  version: 7.7.0
-  resolution: "@pob/root@npm:7.7.0"
+"@pob/root@npm:7.8.0":
+  version: 7.8.0
+  resolution: "@pob/root@npm:7.8.0"
   dependencies:
-    "@commitlint/cli": 17.5.1
+    "@commitlint/cli": 17.6.1
     "@pob/pretty-eslint-config": 4.1.1
     "@pob/pretty-pkg": 5.1.2
     conventional-changelog-conventionalcommits: ^5.0.0
     husky: ~8.0.1
     json5: ^2.2.2
-    lint-staged: 13.2.0
-    pob-dependencies: 7.7.0
+    lint-staged: 13.2.1
+    pob-dependencies: 7.8.0
     prettier: 2.8.7
     repository-check-dirty: 5.1.1
     semver: ^7.3.7
@@ -1132,7 +1132,7 @@ __metadata:
     pretty-eslint-config: bin/pretty-eslint-config.js
     pretty-pkg: bin/pretty-pkg.js
     repository-check-dirty: bin/repository-check-dirty.js
-  checksum: d13533857e7cd1c491250cd601b0af72fc7b59a8fd8c2db164f05c3d62ce6a9d66833439a3b5718bca1df878e7f594c257c96fe6500cf38d9114621d7c3d743d
+  checksum: e92b3da9018f37c6541a34e996877687a073233955f41a4a85cd5cfe92b4a711c382c412d32d3c86e990dd93b634756d65d063db8a60b0c4b993c73f392d769d
   languageName: node
   linkType: hard
 
@@ -2244,7 +2244,7 @@ __metadata:
   dependencies:
     "@pob/commitlint-config": 5.1.1
     "@pob/eslint-config": 50.0.4
-    "@pob/root": 7.7.0
+    "@pob/root": 7.8.0
     "@types/jest": 29.5.0
     check-package-dependencies: 6.3.2
     eslint: 8.38.0
@@ -4358,9 +4358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:13.2.0":
-  version: 13.2.0
-  resolution: "lint-staged@npm:13.2.0"
+"lint-staged@npm:13.2.1":
+  version: 13.2.1
+  resolution: "lint-staged@npm:13.2.1"
   dependencies:
     chalk: 5.2.0
     cli-truncate: ^3.1.0
@@ -4377,7 +4377,7 @@ __metadata:
     yaml: ^2.2.1
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: dcaa8fbbde567eb8ac27230a18b3a22f30c278c524c0e27cf7d4110d662d5d33ed68a585a2e1b05075ef1c262e853f557a5ae046188b723603246d63e6b9f07b
+  checksum: 5788d3fe38e69b7f7b7f700284d4e10738978a0916bc77d3f6253c43a030fc4f01f89c09da349fb658f929f3393d8b1e3eaabaac5b604416ebc33476640b51ce
   languageName: node
   linkType: hard
 
@@ -5160,10 +5160,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pob-dependencies@npm:7.7.0":
-  version: 7.7.0
-  resolution: "pob-dependencies@npm:7.7.0"
-  checksum: c34ed7521e92b91b66d61160d5a01965056a5dddd86edf914b8ba8725580a70178ed8fd1a1b1909d07b7fd1386d0659f16e3343087a5fc478ab995649f82df82
+"pob-dependencies@npm:7.8.0":
+  version: 7.8.0
+  resolution: "pob-dependencies@npm:7.8.0"
+  checksum: 8219334f372075db1bf01875a7a426c03d071d86e72c1141dd99f214122c4d0e210e19952f23da48f3b6c812d71c19f2663e509e3f14ce572bfee36529d3b9ce
   languageName: node
   linkType: hard
 
