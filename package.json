@@ -66,7 +66,7 @@
   "devDependencies": {
     "@pob/commitlint-config": "6.0.0",
     "@pob/eslint-config": "51.0.0",
-    "@pob/root": "8.0.0",
+    "@pob/root": "8.0.1",
     "@types/jest": "29.5.2",
     "check-package-dependencies": "6.4.1",
     "eslint": "8.43.0",
