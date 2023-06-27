@@ -17,7 +17,7 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -63,9 +63,9 @@
   },
   "pob": {},
   "devDependencies": {
-    "@pob/commitlint-config": "5.1.1",
+    "@pob/commitlint-config": "6.0.0",
     "@pob/eslint-config": "50.0.5",
-    "@pob/root": "7.8.0",
+    "@pob/root": "8.0.0",
     "@types/jest": "29.5.2",
     "check-package-dependencies": "6.4.1",
     "eslint": "8.43.0",
