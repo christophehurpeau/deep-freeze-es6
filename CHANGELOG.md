@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/christophehurpeau/deep-freeze-es6/compare/v2.0.0...v3.0.0) (2023-06-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** requires node 18
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @pob/root to v8 ([#67](https://github.com/christophehurpeau/deep-freeze-es6/issues/67)) ([ab2160b](https://github.com/christophehurpeau/deep-freeze-es6/commit/ab2160b4163b71f3577d0d404e9f90acdc569992))
+
 ## [2.0.0](https://github.com/christophehurpeau/deep-freeze-es6/compare/v1.3.1...v2.0.0) (2022-11-22)
 
 
