@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/christophehurpeau/deep-freeze-es6/compare/v3.0.0...v3.0.1) (2023-07-29)
+
+
+### Bug Fixes
+
+* configure types in exports ([d82bf86](https://github.com/christophehurpeau/deep-freeze-es6/commit/d82bf8685597b26b0e3a69b4319cb76e2424fd99))
+
 ## [3.0.0](https://github.com/christophehurpeau/deep-freeze-es6/compare/v2.0.0...v3.0.0) (2023-06-27)
 
 
