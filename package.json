@@ -1,6 +1,6 @@
 {
   "name": "deep-freeze-es6",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "deep freeze, works with Map and Set",
   "keywords": [
     "freeze",
