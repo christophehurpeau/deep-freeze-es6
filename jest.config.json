@@ -1,0 +1,10 @@
+{
+  "cacheDirectory": "./node_modules/.cache/jest",
+  "testMatch": [
+    "<rootDir>/lib/**/__tests__/**/*.?(m)js",
+    "<rootDir>/lib/**/*.test.?(m)js"
+  ],
+  "collectCoverageFrom": ["lib/**/*.?(m)js"],
+  "moduleFileExtensions": ["js", "json"],
+  "extensionsToTreatAsEsm": []
+}

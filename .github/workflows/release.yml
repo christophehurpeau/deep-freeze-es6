@@ -1,0 +1,60 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Dry run"
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 200
+          fetch-tags: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install Dependencies
+        run: yarn install --immutable --immutable-cache
+
+      - name: New version (dry run)
+        if: github.ref == 'refs/heads/main' && inputs.dry-run
+        run: yarn version --dry-run
+      - name: Configure Git user
+        if: github.ref == 'refs/heads/main' && !inputs.dry-run
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: New version
+        if: github.ref == 'refs/heads/main' && !inputs.dry-run
+        run: |
+          yarn version --create-release=github  -m 'chore: release %v [skip ci]'
+        env:
+          HUSKY: 0
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: Publish to npm
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "Missing env variable NODE_AUTH_TOKEN"
+            exit 1
+          fi
+          echo >> ./.yarnrc.yml
+          echo "npmAuthToken: $NODE_AUTH_TOKEN" >> ./.yarnrc.yml
+          yarn npm publish
+        if: github.ref == 'refs/heads/main' && !inputs.dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
