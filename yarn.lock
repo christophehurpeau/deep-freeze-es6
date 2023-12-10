@@ -1065,12 +1065,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:51.1.2":
-  version: 51.1.2
-  resolution: "@pob/eslint-config@npm:51.1.2"
+"@pob/eslint-config@npm:51.2.0":
+  version: 51.2.0
+  resolution: "@pob/eslint-config@npm:51.2.0"
   dependencies:
     eslint-config-airbnb-base: "npm:^15.0.0"
-    eslint-config-prettier: "npm:^9.0.0"
+    eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import: "npm:^2.28.1"
     eslint-plugin-node: "npm:^11.1.0"
     eslint-plugin-unicorn: "npm:^48.0.1"
@@ -1086,7 +1086,7 @@ __metadata:
       optional: true
     eslint-plugin-unicorn:
       optional: true
-  checksum: 2b7de9cfda660712a66730f845788b05196adaea38a320d4d012cf23ec5f0b21511094f9c459dc3766c0dc4b6311e40b2ab261c553aa563a2456ced132851d14
+  checksum: a22ea655f56039018f72e39101255f479998cfec7fc9fb383d3fbb0c816652aff5dc37810de32b2676233b723bd8d2d2df869d24498338ef36c7364d3a62321a
   languageName: node
   linkType: hard
 
@@ -2253,7 +2253,7 @@ __metadata:
   resolution: "deep-freeze-es6@workspace:."
   dependencies:
     "@pob/commitlint-config": "npm:6.2.0"
-    "@pob/eslint-config": "npm:51.1.2"
+    "@pob/eslint-config": "npm:51.2.0"
     "@pob/root": "npm:8.7.0"
     "@types/jest": "npm:29.5.11"
     check-package-dependencies: "npm:7.0.0"
@@ -2530,14 +2530,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "eslint-config-prettier@npm:9.0.0"
+"eslint-config-prettier@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "eslint-config-prettier@npm:9.1.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: bc1f661915845c631824178942e5d02f858fe6d0ea796f0050d63e0f681927b92696e81139dd04714c08c3e7de580fd079c66162e40070155ba79eaee78ab5d0
+  checksum: 6d332694b36bc9ac6fdb18d3ca2f6ac42afa2ad61f0493e89226950a7091e38981b66bac2b47ba39d15b73fff2cd32c78b850a9cf9eed9ca9a96bfb2f3a2f10d
   languageName: node
   linkType: hard
 
