@@ -37,7 +37,6 @@
     "build": "yarn run build:definitions",
     "build:definitions": "tsc --lib esnext --noEmit --skipLibCheck ./lib/index.d.ts",
     "checks": "node scripts/check-package.js",
-    "clean:build": "true",
     "lint": "yarn run lint:prettier && yarn run lint:eslint",
     "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} lib scripts",
     "lint:prettier": "pob-root-prettier --check .",
@@ -45,7 +44,7 @@
     "postinstallDev": "pob-root-postinstall",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "test-typings": "tsc -p typings/tsconfig.json",
-    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest  --coverage --coverageReporters=json --coverageReporters=text",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --coverageReporters=json --coverageReporters=text",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
   },
   "prettier": "@pob/root/prettier-config",

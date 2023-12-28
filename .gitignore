@@ -14,7 +14,7 @@ yarn-error.log*
 *.sublime-project
 *.sublime-workspace
 
-# jest default coverage directory
+# default coverage directory
 /coverage
 
 #*
