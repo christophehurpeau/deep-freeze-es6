@@ -30,24 +30,25 @@ jobs:
 
       - name: Prettier
         run: yarn run lint:prettier
-        if: startsWith(matrix.node-version, '18.')
+        if: startsWith(matrix.node-version, '20.')
 
       - name: Eslint
         run: yarn run lint:eslint
-        if: startsWith(matrix.node-version, '18.')
+        if: startsWith(matrix.node-version, '20.')
 
       - name: Generate Test Coverage
         run: yarn run test:coverage
-        if: startsWith(matrix.node-version, '18.')
+        if: startsWith(matrix.node-version, '20.')
         env:
           CI: true
+          NODE_V8_COVERAGE: coverage/
 
       - name: Send results to codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-        if: startsWith(matrix.node-version, '18.')
+        if: startsWith(matrix.node-version, '20.')
 
       - name: Check nothing was forgotten before commit
-        if: startsWith(matrix.node-version, '18.')
+        if: startsWith(matrix.node-version, '20.')
         run: yarn run repository-check-dirty
