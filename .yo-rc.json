@@ -12,7 +12,8 @@
       "documentation": false,
       "testing": {
         "ci": true,
-        "codecov": true
+        "codecov": true,
+        "runner": "node"
       }
     }
   }

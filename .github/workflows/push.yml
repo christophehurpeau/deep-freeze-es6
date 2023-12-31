@@ -37,7 +37,7 @@ jobs:
         if: startsWith(matrix.node-version, '20.')
 
       - name: Generate Test Coverage
-        run: yarn run test:coverage
+        run: yarn run test:coverage:json
         if: startsWith(matrix.node-version, '20.')
         env:
           CI: true
