@@ -23,7 +23,7 @@ jobs:
         run: corepack enable
 
       - name: Install Dependencies
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
 
       - name: Checks
         run: yarn run checks
@@ -44,7 +44,7 @@ jobs:
           NODE_V8_COVERAGE: coverage/
 
       - name: Send results to codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
         if: startsWith(matrix.node-version, '20.')
