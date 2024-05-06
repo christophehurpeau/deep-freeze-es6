@@ -17,7 +17,7 @@
 ## Quick example
 
 ```js
-import { deepFreeze } from 'deep-freeze-es6';
+import { deepFreeze } from "deep-freeze-es6";
 
 const obj = deepFreeze({
   map: new Map([
