@@ -54,7 +54,9 @@
       "@pob/commitlint-config"
     ]
   },
-  "pob": {},
+  "pob": {
+    "typescript": "check-only"
+  },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
     "@pob/commitlint-config": "7.0.0",

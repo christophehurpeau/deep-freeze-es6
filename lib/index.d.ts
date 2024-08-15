@@ -8,3 +8,4 @@ declare const deepFreeze: DeepFreezeExport;
 
 export = deepFreeze;
 export as namespace deepFreeze;
+export { deepFreeze };
