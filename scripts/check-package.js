@@ -1,4 +1,4 @@
-import { createCheckPackage } from 'check-package-dependencies';
+import { createCheckPackage } from "check-package-dependencies";
 
 await createCheckPackage({
   isLibrary: true,

@@ -38,7 +38,7 @@
     "build:definitions": "tsc --lib esnext --noEmit --skipLibCheck ./lib/index.d.ts",
     "checks": "node scripts/check-package.js",
     "lint": "yarn run lint:prettier && yarn run lint:eslint",
-    "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} lib scripts",
+    "lint:eslint": "eslint --quiet .",
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
     "postinstallDev": "pob-root-postinstall",
@@ -57,11 +57,11 @@
   "pob": {},
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "6.3.2",
-    "@pob/eslint-config": "55.2.1",
-    "@pob/root": "9.5.0",
-    "check-package-dependencies": "7.1.1",
-    "eslint": "8.57.0",
-    "typescript": "5.4.5"
+    "@pob/commitlint-config": "7.0.0",
+    "@pob/eslint-config": "58.0.0",
+    "@pob/root": "13.1.0",
+    "check-package-dependencies": "7.2.0",
+    "eslint": "9.9.0",
+    "typescript": "5.5.4"
   }
 }
