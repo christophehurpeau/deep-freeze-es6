@@ -37,7 +37,12 @@ jobs:
         if: startsWith(matrix.node-version, '20.')
 
       - name: Generate Test Coverage
-        run: yarn run test:coverage:json
+        run: |
+          if [ -z "$CODECOV_TOKEN" ]; then
+            echo "Missing env variable CODECOV_TOKEN"
+            exit 1
+          fi
+          yarn run test:coverage:json
         if: startsWith(matrix.node-version, '20.')
         env:
           CI: true
