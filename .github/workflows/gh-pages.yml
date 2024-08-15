@@ -20,12 +20,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install --immutable
 
-      - name: Configure c8
-        run: |
-          echo '{"reports-dir": "docs/coverage"}' > .c8rc.json
-
       - name: Generate Coverage
-        run: yarn test:coverage:lcov
+        run: NODE_V8_COVERAGE=./docs/coverage yarn test:coverage:lcov
 
       - name: Create nojekyll
         run: touch docs/.nojekyll

@@ -44,9 +44,9 @@
     "postinstallDev": "pob-root-postinstall",
     "test": "node --test lib/**/*.test.js",
     "test-typings": "tsc -p typings/tsconfig.json",
-    "test:coverage": "npx c8 --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:json": "npx c8 --reporter=json --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:lcov": "npx c8 --reporter=lcov --src ./lib node --test lib/**/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage lib/**/*.test.js",
+    "test:coverage:json": "node --test --experimental-test-coverage lib/**/*.test.js",
+    "test:coverage:lcov": "node --test --experimental-test-coverage --test-reporter=lcov lib/**/*.test.js",
     "test:watch": "node --test lib/**/*.test.js"
   },
   "commitlint": {
