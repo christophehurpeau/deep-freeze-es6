@@ -42,12 +42,12 @@
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
     "postinstallDev": "pob-root-postinstall",
-    "test": "TS_NODE_PROJECT=tsconfig.test.json node --test lib/**/*.test.js",
+    "test": "node --test lib/**/*.test.js",
     "test-typings": "tsc -p typings/tsconfig.json",
-    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:json": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=json --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:lcov": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=lcov --src ./lib node --test lib/**/*.test.js",
-    "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --test lib/**/*.test.js"
+    "test:coverage": "npx c8 --src ./lib node --test lib/**/*.test.js",
+    "test:coverage:json": "npx c8 --reporter=json --src ./lib node --test lib/**/*.test.js",
+    "test:coverage:lcov": "npx c8 --reporter=lcov --src ./lib node --test lib/**/*.test.js",
+    "test:watch": "node --test lib/**/*.test.js"
   },
   "commitlint": {
     "extends": [
