@@ -599,9 +599,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/root@npm:13.1.0":
-  version: 13.1.0
-  resolution: "@pob/root@npm:13.1.0"
+"@pob/root@npm:13.2.0":
+  version: 13.2.0
+  resolution: "@pob/root@npm:13.2.0"
   dependencies:
     "@commitlint/cli": "npm:19.4.0"
     "@pob/pretty-eslint-config": "npm:7.0.0"
@@ -627,7 +627,7 @@ __metadata:
     pretty-pkg: ./bin/pretty-pkg.js
     repository-check-dirty: ./bin/repository-check-dirty.js
     yarn-version: ./bin/yarn-version.js
-  checksum: 10c0/713b1011dd5090b814d77cc6db41c340b2d7536293bd29093fdd9a1a459195eb4e5a4354c85929474050f75c2c5ac79f6f06dde5b24a88f479a9c4287e7480da
+  checksum: 10c0/b04dbfd6166dde65222ef8c95da5b8167aee2191c4aed69621fce2b3ab28d8e93ef870ef5913b7db2fde263cc038661ff48acbd62f25c5629b6ce0aa97098487
   languageName: node
   linkType: hard
 
@@ -1464,7 +1464,7 @@ __metadata:
   dependencies:
     "@pob/commitlint-config": "npm:7.0.0"
     "@pob/eslint-config": "npm:58.0.0"
-    "@pob/root": "npm:13.1.0"
+    "@pob/root": "npm:13.2.0"
     check-package-dependencies: "npm:7.2.0"
     eslint: "npm:9.9.0"
     typescript: "npm:5.5.4"
