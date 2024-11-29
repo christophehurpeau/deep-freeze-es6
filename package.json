@@ -16,7 +16,7 @@
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
   "type": "module",
-  "packageManager": "yarn@4.5.0",
+  "packageManager": "yarn@4.5.3",
   "engines": {
     "node": ">=20.9.0"
   },
