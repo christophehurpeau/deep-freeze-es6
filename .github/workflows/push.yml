@@ -27,6 +27,7 @@ jobs:
 
       - name: Checks
         run: yarn run checks
+        if: startsWith(matrix.node-version, '22.')
 
       - name: Prettier
         run: yarn run lint:prettier
