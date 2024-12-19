@@ -1,5 +1,24 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.0.0](https://github.com/christophehurpeau/deep-freeze-es6/compare/v3.0.2...v4.0.0) (2024-12-19)
+
+### ⚠ BREAKING CHANGES
+
+* drop node 18
+* freeze contents of Maps and Sets (#172)
+
+### Features
+
+* add support for weakmap et weakset ([274fe7c](https://github.com/christophehurpeau/deep-freeze-es6/commit/274fe7cb93213743648b9391121193e78378313c))
+* freeze contents of Maps and Sets ([#172](https://github.com/christophehurpeau/deep-freeze-es6/issues/172)) ([e59f83a](https://github.com/christophehurpeau/deep-freeze-es6/commit/e59f83a14153f801d9e13ee57e0c47abfd7170b2))
+
+### Miscellaneous Chores
+
+* update dev deps ([422392b](https://github.com/christophehurpeau/deep-freeze-es6/commit/422392b7645f3da9c827aba207b4af5e354c5895))
+
 ## [3.0.2](https://github.com/christophehurpeau/deep-freeze-es6/compare/v3.0.1...v3.0.2) (2023-07-29)
 
 
