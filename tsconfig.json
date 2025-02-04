@@ -1,12 +1,12 @@
 {
   "extends": [
     "@pob/root/tsconfigs/base.json",
-    "@pob/root/tsconfigs/targets/node-18.json"
+    "@pob/root/tsconfigs/targets/node-20.json"
   ],
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
     "noEmit": true
   },
-  "include": ["lib/**/*.js"]
+  "include": ["lib/**/*.js", "lib/**/*.mjs", "lib/**/*.cjs", "lib/**/*.d.ts"]
 }

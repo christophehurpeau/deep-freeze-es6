@@ -16,9 +16,9 @@
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
   "type": "module",
-  "packageManager": "yarn@4.5.3",
+  "packageManager": "yarn@4.6.0",
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20.9.0"
   },
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -35,7 +35,7 @@
   ],
   "scripts": {
     "build": "yarn run build:definitions",
-    "build:definitions": "tsc --lib esnext --noEmit --skipLibCheck ./lib/index.d.ts",
+    "build:definitions": "tsc -p tsconfig.json",
     "checks": "node scripts/check-package.js",
     "lint": "yarn run lint:prettier && yarn run lint:eslint",
     "lint:eslint": "eslint --quiet .",
@@ -59,11 +59,11 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "8.0.1",
-    "@pob/eslint-config": "59.2.0",
+    "@pob/commitlint-config": "9.1.0",
+    "@pob/eslint-config": "59.5.0",
     "@pob/root": "16.3.0",
-    "check-package-dependencies": "9.0.0",
-    "eslint": "9.17.0",
-    "typescript": "5.7.2"
+    "check-package-dependencies": "9.1.0",
+    "eslint": "9.19.0",
+    "typescript": "5.7.3"
   }
 }
