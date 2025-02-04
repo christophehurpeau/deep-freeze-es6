@@ -61,7 +61,7 @@
   "devDependencies": {
     "@pob/commitlint-config": "8.0.1",
     "@pob/eslint-config": "59.2.0",
-    "@pob/root": "15.0.0",
+    "@pob/root": "16.3.0",
     "check-package-dependencies": "9.0.0",
     "eslint": "9.17.0",
     "typescript": "5.7.2"
