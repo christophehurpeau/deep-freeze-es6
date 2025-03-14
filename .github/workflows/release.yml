@@ -26,6 +26,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          check-latest: true
 
       - name: Check git tags
         if: github.ref == 'refs/heads/main' && !inputs.allow-no-tags
