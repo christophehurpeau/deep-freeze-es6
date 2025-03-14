@@ -15,6 +15,10 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Enable Corepack
         run: corepack enable
 
@@ -25,7 +29,7 @@ jobs:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: Run pob-root-postinstall
-        run: yarn run pob-root-postinstall
+        run: yarn pob-root-postinstall
 
       - name: Run pob update
         run: npx pob update --force
@@ -44,3 +48,5 @@ jobs:
             -c user.email="christophehurpeau@users.noreply.github.com" \
             commit -m "chore: update pob root" --author="github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           git push --no-verify
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
