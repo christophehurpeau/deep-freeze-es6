@@ -63,7 +63,7 @@
     "@pob/eslint-config": "59.6.0",
     "@pob/root": "16.3.0",
     "check-package-dependencies": "9.1.0",
-    "eslint": "9.19.0",
+    "eslint": "9.22.0",
     "typescript": "5.7.3"
   }
 }
