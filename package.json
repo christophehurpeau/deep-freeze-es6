@@ -16,7 +16,7 @@
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
   "type": "module",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.7.0",
   "engines": {
     "node": ">=20.9.0"
   },
@@ -61,7 +61,7 @@
   "devDependencies": {
     "@pob/commitlint-config": "9.1.2",
     "@pob/eslint-config": "59.8.0",
-    "@pob/root": "16.8.0",
+    "@pob/root": "16.9.0",
     "check-package-dependencies": "10.1.0",
     "eslint": "9.22.0",
     "typescript": "5.8.2"
