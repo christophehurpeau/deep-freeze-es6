@@ -18,7 +18,7 @@
   "type": "module",
   "packageManager": "yarn@4.7.0",
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.11.0"
   },
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -41,7 +41,9 @@
     "lint:eslint": "eslint --quiet .",
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
-    "postinstallDev": "pob-root-postinstall",
+    "postinstall": "pob-root-postinstall",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
     "test": "node --test lib/**/*.test.js",
     "test-typings": "tsc -p typings/tsconfig.json",
     "test:coverage": "npx c8 --all --src ./lib node --test lib/**/*.test.js",
@@ -59,11 +61,12 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "9.1.2",
-    "@pob/eslint-config": "59.8.0",
+    "@pob/commitlint-config": "9.1.4",
+    "@pob/eslint-config": "60.0.0",
     "@pob/root": "18.0.2",
-    "check-package-dependencies": "10.1.0",
-    "eslint": "9.22.0",
-    "typescript": "5.8.2"
+    "check-package-dependencies": "10.2.0",
+    "eslint": "9.25.1",
+    "pinst": "3.0.0",
+    "typescript": "5.8.3"
   }
 }
