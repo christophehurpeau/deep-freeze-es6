@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/christophehurpeau/deep-freeze-es6/compare/v4.0.0...v4.0.1) (2025-06-08)
+
+Note: no notable changes
+
+
 ## [4.0.0](https://github.com/christophehurpeau/deep-freeze-es6/compare/v3.0.2...v4.0.0) (2024-12-19)
 
 ### ⚠ BREAKING CHANGES
