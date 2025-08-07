@@ -64,6 +64,6 @@
     "@pob/root": "16.9.0",
     "check-package-dependencies": "10.1.0",
     "eslint": "9.22.0",
-    "typescript": "5.8.2"
+    "typescript": "5.9.2"
   }
 }
