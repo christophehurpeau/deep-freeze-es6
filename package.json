@@ -59,7 +59,7 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "9.1.2",
+    "@pob/commitlint-config": "10.0.0",
     "@pob/eslint-config": "59.8.0",
     "@pob/root": "16.9.0",
     "check-package-dependencies": "10.1.0",
