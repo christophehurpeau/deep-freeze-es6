@@ -16,9 +16,9 @@
     "url": "https://github.com/christophehurpeau/deep-freeze-es6/issues"
   },
   "type": "module",
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.9.3",
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22.18.0"
   },
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -41,13 +41,15 @@
     "lint:eslint": "eslint --quiet .",
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
-    "postinstallDev": "pob-root-postinstall",
-    "test": "node --test lib/**/*.test.js",
+    "postinstall": "pob-root-postinstall",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
+    "test": "TZ=UTC node --test lib/**/*.test.js",
     "test-typings": "tsc -p typings/tsconfig.json",
-    "test:coverage": "npx c8 --all --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:json": "npx c8 --reporter=json --all --src ./lib node --test lib/**/*.test.js",
+    "test:coverage": "TZ=UTC npx c8 --all --src ./lib node --test lib/**/*.test.js",
+    "test:coverage:json": "TZ=UTC npx c8 --reporter=json --all --src ./lib node --test lib/**/*.test.js",
     "test:coverage:lcov": "npx c8 --reporter=lcov --all --src ./lib node --test lib/**/*.test.js",
-    "test:watch": "node --test lib/**/*.test.js"
+    "test:watch": "TZ=UTC node --test lib/**/*.test.js"
   },
   "commitlint": {
     "extends": [
@@ -59,11 +61,12 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "9.1.2",
-    "@pob/eslint-config": "59.8.0",
-    "@pob/root": "16.9.0",
-    "check-package-dependencies": "10.1.0",
-    "eslint": "9.22.0",
-    "typescript": "5.8.2"
+    "@pob/commitlint-config": "10.0.0",
+    "@pob/eslint-config": "62.0.0",
+    "@pob/root": "19.1.0",
+    "check-package-dependencies": "10.4.1",
+    "eslint": "9.35.0",
+    "pinst": "3.0.0",
+    "typescript": "5.9.2"
   }
 }

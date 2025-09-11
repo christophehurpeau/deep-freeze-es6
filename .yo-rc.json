@@ -1,20 +1,20 @@
 {
   "pob": {
-    "project": {
-      "type": "lib",
-      "packageManager": "yarn",
-      "yarnNodeLinker": "node-modules"
-    },
     "renovate": {
       "enable": true
     },
     "lib": {
       "documentation": false,
       "testing": {
-        "ci": true,
         "codecov": true,
         "runner": "node"
       }
+    },
+    "project": {
+      "type": "lib",
+      "packageManager": "yarn",
+      "yarnNodeLinker": "node-modules",
+      "ci": true
     }
   }
 }

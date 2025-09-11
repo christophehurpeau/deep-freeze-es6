@@ -1,7 +1,7 @@
 {
   "extends": [
     "@pob/root/tsconfigs/base.json",
-    "@pob/root/tsconfigs/targets/node-20.json"
+    "@pob/root/tsconfigs/targets/node-22.json"
   ],
   "compilerOptions": {
     "allowJs": true,
