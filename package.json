@@ -53,7 +53,7 @@
   },
   "commitlint": {
     "extends": [
-      "@pob/commitlint-config"
+      "@pob/root/commitlint-config"
     ]
   },
   "pob": {
@@ -61,7 +61,6 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "10.0.0",
     "@pob/eslint-config": "62.0.0",
     "@pob/root": "19.2.0",
     "check-package-dependencies": "10.4.1",
