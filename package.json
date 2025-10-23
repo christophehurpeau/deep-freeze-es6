@@ -67,6 +67,6 @@
     "check-package-dependencies": "10.5.0",
     "eslint": "9.38.0",
     "pinst": "3.0.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
