@@ -48,12 +48,11 @@
     "test-typings": "tsc -p typings/tsconfig.json",
     "test:coverage": "TZ=UTC npx c8 --all --src ./lib node --test lib/**/*.test.js",
     "test:coverage:json": "TZ=UTC npx c8 --reporter=json --all --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:lcov": "npx c8 --reporter=lcov --all --src ./lib node --test lib/**/*.test.js",
     "test:watch": "TZ=UTC node --test lib/**/*.test.js"
   },
   "commitlint": {
     "extends": [
-      "@pob/commitlint-config"
+      "@pob/root/commitlint-config"
     ]
   },
   "pob": {
@@ -61,12 +60,11 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "10.0.0",
     "@pob/eslint-config": "62.0.0",
-    "@pob/root": "19.1.0",
+    "@pob/root": "19.5.0",
     "check-package-dependencies": "10.5.0",
     "eslint": "9.38.0",
     "pinst": "3.0.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
