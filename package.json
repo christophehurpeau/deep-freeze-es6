@@ -61,7 +61,7 @@
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
     "@pob/eslint-config": "62.0.0",
-    "@pob/root": "19.7.1",
+    "@pob/root": "19.8.0",
     "check-package-dependencies": "10.5.0",
     "eslint": "9.39.1",
     "pinst": "3.0.0",
