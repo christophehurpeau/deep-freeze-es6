@@ -46,6 +46,7 @@ jobs:
       - name: New version (dry run)
         if: github.ref == 'refs/heads/main' && inputs.dry-run
         run: yarn yarn-version version --dry-run
+
       - name: Configure Git user
         if: github.ref == 'refs/heads/main' && !inputs.dry-run
         run: |
