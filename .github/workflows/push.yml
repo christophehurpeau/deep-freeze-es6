@@ -11,7 +11,7 @@ jobs:
         node-version: [22.x]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Enable Corepack
         run: corepack enable
