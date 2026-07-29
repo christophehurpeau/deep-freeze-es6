@@ -200,15 +200,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/core@npm:^0.17.0":
-  version: 0.17.0
-  resolution: "@eslint/core@npm:0.17.0"
-  dependencies:
-    "@types/json-schema": "npm:^7.0.15"
-  checksum: 10c0/9a580f2246633bc752298e7440dd942ec421860d1946d0801f0423830e67887e4aeba10ab9a23d281727a978eb93d053d1922a587d502942a713607f40ed704e
-  languageName: node
-  linkType: hard
-
 "@eslint/core@npm:^1.1.1, @eslint/core@npm:^1.2.1":
   version: 1.2.1
   resolution: "@eslint/core@npm:1.2.1"
@@ -246,16 +237,6 @@ __metadata:
   version: 3.0.5
   resolution: "@eslint/object-schema@npm:3.0.5"
   checksum: 10c0/1db337431f520b99e9edda64ef5fafd7ec6a029843eeb608753025125b6649d861d843cffafafd3c4e37926d7d5f9ec0c6a8e3665c13c3da2144e8132892e92e
-  languageName: node
-  linkType: hard
-
-"@eslint/plugin-kit@npm:^0.4.0":
-  version: 0.4.1
-  resolution: "@eslint/plugin-kit@npm:0.4.1"
-  dependencies:
-    "@eslint/core": "npm:^0.17.0"
-    levn: "npm:^0.4.1"
-  checksum: 10c0/51600f78b798f172a9915dffb295e2ffb44840d583427bc732baf12ecb963eb841b253300e657da91d890f4b323d10a1bd12934bf293e3018d8bb66fdce5217b
   languageName: node
   linkType: hard
 
@@ -1468,19 +1449,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"check-package-dependencies@npm:10.5.0":
-  version: 10.5.0
-  resolution: "check-package-dependencies@npm:10.5.0"
+"check-package-dependencies@npm:12.2.0":
+  version: 12.2.0
+  resolution: "check-package-dependencies@npm:12.2.0"
   dependencies:
-    "@eslint/plugin-kit": "npm:^0.4.0"
+    "@eslint/plugin-kit": "npm:^0.7.2"
     jsonc-parser: "npm:^3.3.1"
-    semver: "npm:^7.7.3"
+    semver: "npm:^7.8.5"
     semver-utils: "npm:^1.1.4"
-    tslib: "npm:^2.8.1"
     type-fest: "npm:^4.37.0 || ^5.1.0"
+  peerDependencies:
+    eslint: ^10.6.0
+  peerDependenciesMeta:
+    eslint:
+      optional: true
   bin:
     check-package-dependencies: ./bin/check-package-dependencies.mjs
-  checksum: 10c0/20bb8514455bd9d327cde8b4aee873e052110707fe6c47488558fd5895ddf0dd32cdab10aca05331bf8b92d143a34b9517babe064596289e7bf32bf5d8a47bd4
+  checksum: 10c0/bab01965e8a6ab20359c685340ec60b9fceb8216c2339286c1a6d03cd567d54934e2db60e2d091665f5051dbf65ea20e41985a7d33a44ab2ed4805b7c645fef6
   languageName: node
   linkType: hard
 
@@ -1755,7 +1740,7 @@ __metadata:
   dependencies:
     "@pob/eslint-config": "npm:65.6.0"
     "@pob/root": "npm:19.8.0"
-    check-package-dependencies: "npm:10.5.0"
+    check-package-dependencies: "npm:12.2.0"
     eslint: "npm:10.7.0"
     pinst: "npm:3.0.0"
     typescript: "npm:6.0.3"
@@ -4005,7 +3990,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.1.1, semver@npm:^7.3.5, semver@npm:^7.5.2, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.3, semver@npm:^7.7.2, semver@npm:^7.7.3, semver@npm:^7.7.4":
+"semver@npm:^7.1.1, semver@npm:^7.3.5, semver@npm:^7.5.2, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.3, semver@npm:^7.7.2, semver@npm:^7.7.3, semver@npm:^7.7.4, semver@npm:^7.8.5":
   version: 7.8.5
   resolution: "semver@npm:7.8.5"
   bin:
@@ -4424,7 +4409,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.8.1":
+"tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
