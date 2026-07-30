@@ -1,5 +1,6 @@
 name: Push CI
-
+permissions:
+  contents: read
 on: [push]
 
 jobs:
@@ -8,43 +9,40 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [22.x, 24.x]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
-          check-latest: true
           registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
-      - name: Checks
-        run: yarn run checks
-        if: startsWith(matrix.node-version, '22.')
-
-      - name: Prettier
-        run: yarn run lint:prettier
-        if: startsWith(matrix.node-version, '22.')
+      - name: Format
+        run: pnpm run format:check
+        if: startsWith(matrix.node-version, '24.')
 
       - name: Eslint
-        run: yarn run lint:eslint
-        if: startsWith(matrix.node-version, '22.')
+        run: pnpm run lint:eslint
+        if: startsWith(matrix.node-version, '24.')
 
       - name: Check nothing was forgotten before commit
-        if: startsWith(matrix.node-version, '22.')
-        run: yarn run repository-check-dirty
+        if: startsWith(matrix.node-version, '24.')
+        run: pnpm exec repository-check-dirty
 
       - name: Generate Test Coverage
-        run: yarn run test:coverage:json
-        if: startsWith(matrix.node-version, '22.')
+        run: pnpm run test:coverage:generate
+        if: startsWith(matrix.node-version, '24.')
         env:
           CI: true
 
@@ -53,4 +51,6 @@ jobs:
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
-        if: startsWith(matrix.node-version, '22.') && github.actor != 'dependabot[bot]'
+          files: ./docs/coverage.lcov
+          disable_search: true
+        if: startsWith(matrix.node-version, '24.') && github.actor != 'dependabot[bot]'

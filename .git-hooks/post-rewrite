@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+[ "$POB_GIT_HOOKS" = "2" ] && set -x
+[ "$POB_GIT_HOOKS" = "0" ] && exit 0
+[ "$HUSKY" = "0" ] && exit 0
+
+if [ -n "$(git diff HEAD@{1}..HEAD@{0} -- pnpm-lock.yaml)" ] || [ "$1" = "rebase" ]; then
+  pnpm install --frozen-lockfile || true
+fi

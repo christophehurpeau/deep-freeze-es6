@@ -1,10 +1,6 @@
 {
-  "search.exclude": {
-    "**/.yarn": true
-  },
-
-  // set yarn as package manager to run scripts and tasks
-  "npm.packageManager": "yarn",
+  // set pnpm as package manager to run scripts and tasks
+  "npm.packageManager": "pnpm",
 
   // save config
   "editor.formatOnSave": true,
@@ -13,9 +9,6 @@
     "source.fixAll.eslint": "always",
     "source.organizeImports": "never"
   },
-
-  // jest
-  "jest.jestCommandLine": "NODE_OPTIONS=--experimental-vm-modules node_modules/.bin/jest",
 
   // extension eslint config
   "eslint.workingDirectories": ["."],
@@ -30,5 +23,5 @@
 
   // format config
   "eslint.format.enable": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "oxc.oxc-vscode"
 }

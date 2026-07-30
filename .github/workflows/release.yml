@@ -13,23 +13,29 @@ on:
         type: boolean
         default: false
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          ssh-key: ${{ secrets.PUSH_DEPLOY_KEY }}
           fetch-depth: 0
           fetch-tags: true
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - uses: actions/setup-node@v6
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
         with:
-          node-version: 22
-          check-latest: true
+          version: 11
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
 
       - name: Check git tags
         if: github.ref == 'refs/heads/main' && !inputs.allow-no-tags
@@ -39,13 +45,12 @@ jobs:
             echo "No git tags found"
             exit 1
           fi
-
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: New version (dry run)
         if: github.ref == 'refs/heads/main' && inputs.dry-run
-        run: yarn yarn-version version --dry-run
+        run: pnpm exec pob-version --dry-run
 
       - name: Configure Git user
         if: github.ref == 'refs/heads/main' && !inputs.dry-run
@@ -56,21 +61,13 @@ jobs:
       - name: New version
         if: github.ref == 'refs/heads/main' && !inputs.dry-run
         run: |
-          yarn yarn-version version --create-release=github  -m 'chore: release %v [skip ci]'
+          pnpm exec pob-version --create-release=github  -m 'chore: release %v [skip ci]'
         env:
-          HUSKY: 0
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          POB_GIT_HOOKS: 0
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to npm
-        run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "Missing env variable NODE_AUTH_TOKEN"
-            exit 1
-          fi
-          echo >> ./.yarnrc.yml
-          echo "npmAuthToken: $NODE_AUTH_TOKEN" >> ./.yarnrc.yml
-          yarn npm publish
         if: github.ref == 'refs/heads/main' && !inputs.dry-run
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          pnpm publish --no-git-checks

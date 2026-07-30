@@ -8,12 +8,12 @@
       "testing": {
         "codecov": true,
         "runner": "node"
-      }
+      },
+      "e2e": false
     },
     "project": {
       "type": "lib",
-      "packageManager": "yarn",
-      "yarnNodeLinker": "node-modules",
+      "packageManager": "pnpm",
       "ci": true
     }
   }

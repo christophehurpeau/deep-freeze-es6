@@ -6,27 +6,31 @@ on:
       - "renovate/prettier-**"
       - "renovate/major-prettier"
 
+permissions:
+  contents: write
+
 jobs:
   run-prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          ssh-key: ${{ secrets.PUSH_DEPLOY_KEY }}
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - uses: actions/setup-node@v6
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
         with:
-          node-version: 22
-          check-latest: true
+          version: 11
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Run Prettier
-        run: yarn prettier --write .
+        run: pnpm exec prettier --write .
 
       - name: Check for added or modified files
         id: git-check-modified
