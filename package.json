@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@pob/eslint-config": "67.1.1",
-    "@pob/root": "27.2.1",
+    "@pob/root": "27.5.0",
     "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.8.1",
     "typescript": "npm:@typescript/typescript6@6.0.2"
