@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 67.1.1
-        version: 67.1.1(@typescript-eslint/utils@8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+        specifier: 67.4.0
+        version: 67.4.0(@typescript-eslint/utils@8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/root':
         specifier: 27.2.1
         version: 27.2.1(@typescript-eslint/utils@8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
@@ -292,8 +292,28 @@ packages:
       typescript:
         optional: true
 
+  '@pob/eslint-config@67.4.0':
+    resolution: {integrity: sha512-1TEWFtqZv0mD8o+dDmYWuUvd/G8oxlX+0/oyhh6R6lPaaEJ0WxgSthBF+Slv1v5TDal2GMSy2FfYeu0/9cFa5g==}
+    engines: {node: '>=22.18.0'}
+    peerDependencies:
+      eslint: ^10.8.0
+      typescript: '>=5.0.0 <8.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@pob/eslint-plugin@66.1.1':
     resolution: {integrity: sha512-u4089ISgG6nnebnzPN3CgawdtTnL59h5OdWT0B+AqSIDLlysZOEcOxAyHDxa2HKXZ/xbTyxv0iMuduNV/3+8Bg==}
+    engines: {node: '>=22.18.0'}
+    peerDependencies:
+      eslint: ^10.0.2
+      typescript: '>=5.0.0 <8.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@pob/eslint-plugin@66.1.2':
+    resolution: {integrity: sha512-9H2+fnel9Z+J7mXF0fsLtcnB2gdgBK3bAlynjikpVQqY/4JJsVXWNJxV37RnqqSTBMrGRwsUzpeMpbad4J06Tw==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.0.2
@@ -814,6 +834,16 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: ^10.6.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+
+  check-package-dependencies@13.2.0:
+    resolution: {integrity: sha512-zw/RZHpkd9owcQ7yOvM1SWz95LWpbPhqG6m8tMoHtC5uq03hxOIKiQkmMDSMyZ8D/fMcmdVf7+XKjYL/1NNEnA==}
+    engines: {node: '>=22.18.0'}
+    hasBin: true
+    peerDependencies:
+      eslint: ^10.8.0
     peerDependenciesMeta:
       eslint:
         optional: true
@@ -2051,7 +2081,39 @@ snapshots:
       - eslint-import-resolver-node
       - supports-color
 
+  '@pob/eslint-config@67.4.0(@typescript-eslint/utils@8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+    dependencies:
+      '@eslint/js': 10.0.1(eslint@10.8.1)
+      '@eslint/json': 1.2.0
+      '@pob/eslint-plugin': 66.1.2(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      '@typescript-eslint/eslint-plugin': 8.63.0(@typescript-eslint/parser@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      '@typescript-eslint/parser': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      check-package-dependencies: 13.2.0(eslint@10.8.1)
+      confusing-browser-globals: 1.0.11
+      eslint: 10.8.1
+      eslint-plugin-import-x: 4.17.1(@typescript-eslint/utils@8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(eslint@10.8.1)
+      eslint-plugin-n: 17.24.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      eslint-plugin-regexp: 3.1.1(eslint@10.8.1)
+      eslint-plugin-unicorn: 64.0.0(eslint@10.8.1)
+      typescript-eslint: 8.65.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+    optionalDependencies:
+      typescript: '@typescript/typescript6@6.0.2'
+    transitivePeerDependencies:
+      - '@typescript-eslint/utils'
+      - eslint-import-resolver-node
+      - supports-color
+
   '@pob/eslint-plugin@66.1.1(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+    dependencies:
+      '@typescript-eslint/utils': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      eslint: 10.8.1
+      eslint-plugin-react: 7.37.5(eslint@10.8.1)
+    optionalDependencies:
+      typescript: '@typescript/typescript6@6.0.2'
+    transitivePeerDependencies:
+      - supports-color
+
+  '@pob/eslint-plugin@66.1.2(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@typescript-eslint/utils': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       eslint: 10.8.1
@@ -2561,6 +2623,16 @@ snapshots:
   change-case@5.4.4: {}
 
   check-package-dependencies@12.2.0(eslint@10.8.1):
+    dependencies:
+      '@eslint/plugin-kit': 0.7.2
+      jsonc-parser: 3.3.1
+      semver: 7.8.5
+      semver-utils: 1.1.4
+      type-fest: 5.8.0
+    optionalDependencies:
+      eslint: 10.8.1
+
+  check-package-dependencies@13.2.0(eslint@10.8.1):
     dependencies:
       '@eslint/plugin-kit': 0.7.2
       jsonc-parser: 3.3.1
