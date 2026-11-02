@@ -13,5 +13,15 @@
     "**/.tamagui/",
     "**/.expo/",
     "**/*.d.ts"
+  ],
+  "overrides": [
+    {
+      "files": ["typings-tests/**"],
+      "rules": {
+        "eslint/no-unused-vars": "off",
+        "import/extensions": "off",
+        "import/no-named-as-default": "off"
+      }
+    }
   ]
 }
