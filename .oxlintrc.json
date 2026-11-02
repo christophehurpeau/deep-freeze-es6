@@ -12,7 +12,6 @@
     "**/.next/",
     "**/.tamagui/",
     "**/.expo/",
-    "**/*.d.ts",
-    "typings-tests/"
+    "**/*.d.ts"
   ]
 }
