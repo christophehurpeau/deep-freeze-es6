@@ -4,5 +4,5 @@ export default [
   {
     ignores: ["typings-tests/**"],
   },
-  ...pobConfig.configs.nodeModule,
+  ...pobConfig.configs.node,
 ];
