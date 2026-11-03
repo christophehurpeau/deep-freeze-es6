@@ -31,30 +31,40 @@
   },
   "scripts": {
     "build": "pnpm run build:definitions",
-    "build:definitions": "tsc -p tsconfig.json",
+    "build:definitions": "tsrs -p tsconfig.json",
     "format": "oxfmt",
     "format:check": "oxfmt --check .",
-    "lint": "pnpm run format && pnpm run lint:eslint",
+    "lint": "pnpm run format && pnpm run lint:oxlint && pnpm run lint:eslint",
     "lint:eslint": "eslint --quiet .",
+    "lint:oxlint": "oxlint --quiet",
     "prepare": "pob-root-postinstall",
     "test": "TZ=UTC node --test 'lib/**/*.test.js'",
     "test-typings": "tsc -p typings/tsconfig.json",
     "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
-    "test:coverage:generate": "mkdir -p docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
+    "test:coverage:generate": "mkdir -p generated-docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=generated-docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
     "test:watch": "TZ=UTC node --test 'lib/**/*.test.js'",
-    "tsc": "tsc && tsc -p tsconfig.tools.json"
+    "tsc": "tsrs && tsrs -p tsconfig.tools.json",
+    "tsc:go": "tsc && tsc -p tsconfig.tools.json"
   },
   "devDependencies": {
-    "@pob/eslint-config": "67.1.1",
-    "@pob/root": "27.2.1",
+    "@pob/eslint-config": "68.1.0",
+    "@pob/root": "28.3.0",
     "@typescript/native": "npm:typescript@7.0.2",
-    "eslint": "10.8.1",
+    "eslint": "10.12.0",
+    "tsrs": "0.18.0-ts7.1.0-dev.20260929",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
   "commitlint": {
     "extends": [
       "@pob/root/commitlint-config"
     ]
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12.0.0",
+      "onFail": "ignore"
+    }
   },
   "engines": {
     "node": ">=22.18.0"

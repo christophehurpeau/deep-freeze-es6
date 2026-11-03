@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "./node_modules/@pob/eslint-config/oxlint/base.json",
+    "./node_modules/@pob/eslint-config/oxlint/module.json",
+    "./node_modules/@pob/eslint-config/oxlint/node.json"
+  ],
+  "ignorePatterns": [
+    ".yarn",
+    "**/dist/",
+    "**/build/",
+    "**/coverage/",
+    "**/.next/",
+    "**/.tamagui/",
+    "**/.expo/",
+    "**/*.d.ts"
+  ],
+  "overrides": [
+    {
+      "files": ["typings-tests/**"],
+      "rules": {
+        "eslint/no-unused-vars": "off",
+        "import/extensions": "off",
+        "import/no-named-as-default": "off"
+      }
+    }
+  ]
+}

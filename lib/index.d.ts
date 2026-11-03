@@ -2,10 +2,12 @@
 
 type DeepFreezeFn = <T>(obj: T) => T;
 
-type DeepFreezeExport = DeepFreezeFn & { default: DeepFreezeFn };
+type DeepFreezeExport = DeepFreezeFn & {
+  default: DeepFreezeFn;
+  deepFreeze: DeepFreezeFn;
+};
 
 declare const deepFreeze: DeepFreezeExport;
 
 export = deepFreeze;
 export as namespace deepFreeze;
-export { deepFreeze };
