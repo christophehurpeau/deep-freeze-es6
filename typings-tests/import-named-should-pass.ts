@@ -1,4 +1,4 @@
-import * as deepFreeze from "..";
+import { deepFreeze } from "..";
 
 class Foo {
   foo: string;
