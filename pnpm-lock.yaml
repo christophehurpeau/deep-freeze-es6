@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 68.1.0
-        version: 68.1.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0))(@typescript/typescript6@6.0.2)(eslint@10.14.0)
+        specifier: 68.2.0
+        version: 68.2.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0))(@typescript/typescript6@6.0.2)(eslint@10.14.0)
       '@pob/root':
         specifier: 28.3.0
         version: 28.3.0
@@ -435,8 +435,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pob/eslint-config@68.1.0':
-    resolution: {integrity: sha512-VxXsXIRwcEieJOjxJ6wC2FfdtV+AsJHKk9Yo1fawGbHDe8s3tepiem9QRbtI1RN08jcMEN/JqpMSnXD2JMPV5A==}
+  '@pob/eslint-config@68.2.0':
+    resolution: {integrity: sha512-lSTxg5f57mgoj2CopQoSt1C9KI1qeSnYOvLxBtpC+wSd+dHPXEeArlmYVkdiKAZNJuCQaDotCJR2j4MH81/dbw==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.8.0
@@ -445,8 +445,8 @@ packages:
       typescript:
         optional: true
 
-  '@pob/eslint-plugin@67.0.0':
-    resolution: {integrity: sha512-Mw6KJidksWGfJa9QiFsBze0fXjQfk+P8mXLJnWn6U8NrgWq7aHD2JuHjKz7jtcJEXCYh7pQdIHm20tDiBbUAfw==}
+  '@pob/eslint-plugin@67.1.0':
+    resolution: {integrity: sha512-W8Os4O70Fob+SOVfsJNmf6Jn+v+Wxi/zznADO2IZ+GoUiztf+vydpLAhSuUi6u787edCGkIdcuGnOb1GIWWXvQ==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.0.2
@@ -1714,10 +1714,10 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@pob/eslint-config@68.1.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0))(@typescript/typescript6@6.0.2)(eslint@10.14.0)':
+  '@pob/eslint-config@68.2.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0))(@typescript/typescript6@6.0.2)(eslint@10.14.0)':
     dependencies:
       '@eslint/json': 2.1.1
-      '@pob/eslint-plugin': 67.0.0(@typescript/typescript6@6.0.2)(eslint@10.14.0)
+      '@pob/eslint-plugin': 67.1.0(@typescript/typescript6@6.0.2)(eslint@10.14.0)
       '@typescript-eslint/parser': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0)
       check-package-dependencies: 13.2.0(eslint@10.14.0)
       eslint: 10.14.0
@@ -1732,7 +1732,7 @@ snapshots:
       - eslint-import-resolver-node
       - supports-color
 
-  '@pob/eslint-plugin@67.0.0(@typescript/typescript6@6.0.2)(eslint@10.14.0)':
+  '@pob/eslint-plugin@67.1.0(@typescript/typescript6@6.0.2)(eslint@10.14.0)':
     dependencies:
       eslint: 10.14.0
     optionalDependencies:
