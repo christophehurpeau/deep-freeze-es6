@@ -47,8 +47,8 @@
     "tsc:go": "tsc && tsc -p tsconfig.tools.json"
   },
   "devDependencies": {
-    "@pob/eslint-config": "68.0.0",
-    "@pob/root": "28.2.2",
+    "@pob/eslint-config": "68.1.0",
+    "@pob/root": "28.3.0",
     "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.12.0",
     "tsrs": "0.18.0-ts7.1.0-dev.20260929",

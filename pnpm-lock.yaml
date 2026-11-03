@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 68.0.0
-        version: 68.0.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.12.0))(@typescript/typescript6@6.0.2)(eslint@10.12.0)
+        specifier: 68.1.0
+        version: 68.1.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.12.0))(@typescript/typescript6@6.0.2)(eslint@10.12.0)
       '@pob/root':
-        specifier: 28.2.2
-        version: 28.2.2
+        specifier: 28.3.0
+        version: 28.3.0
       '@typescript/native':
         specifier: npm:typescript@7.0.2
         version: typescript@7.0.2
@@ -435,8 +435,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pob/eslint-config@68.0.0':
-    resolution: {integrity: sha512-pGv8kCnNAmBoaouw93KAyBNUQ3c1TyJkys5WNOCi1EwF6MG/akJcB+0eMUkFhWYyld7ATxIFnG7JgSrN3fkiMA==}
+  '@pob/eslint-config@68.1.0':
+    resolution: {integrity: sha512-VxXsXIRwcEieJOjxJ6wC2FfdtV+AsJHKk9Yo1fawGbHDe8s3tepiem9QRbtI1RN08jcMEN/JqpMSnXD2JMPV5A==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.8.0
@@ -455,13 +455,13 @@ packages:
       typescript:
         optional: true
 
-  '@pob/root@28.2.2':
-    resolution: {integrity: sha512-jIZv1cXqPZbewFNdt65+QouyxcUoF2dxzJeujNeCja8LQwvp4J6PMSdjNu94/0xOPzU02j1tQe3RAiWC/UXihw==}
+  '@pob/root@28.3.0':
+    resolution: {integrity: sha512-2aIHF+oFAZ16aP4jZMuJLBYf6KH+tm+6nyfjpj6o/1K1d2KY77yhe1o1aO7uwvSFmmW5vP41YSb6+dRQnrOLHQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/version@8.2.0':
-    resolution: {integrity: sha512-f8or/KnxCvF8ViH9fKlIpwvkpVADyvIkjqYvMq6sNBEK16rzFJrfruKEk8g8vRdLBPX2kN6I/H3gwKOUhreHLw==}
+  '@pob/version@8.3.0':
+    resolution: {integrity: sha512-ojpfAg76Buww2GmFoNqW8v+loAamdhVSxav+JJh1ZKDHKneDy/StRT+utXO/0b10qjqHa/SI5FZDMlpZYcEQWw==}
     engines: {node: '>=24.14.1'}
     hasBin: true
 
@@ -1273,8 +1273,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@28.2.0:
-    resolution: {integrity: sha512-PNrKFB1lXadQk9LWSD+Km07Ca38o5m7juGriFFaVUx/G2m1tNUT9Ej9kqqOvbfp1smDV5e9gfl3COeYeapb2/w==}
+  pob-dependencies@28.3.0:
+    resolution: {integrity: sha512-v52rSpyJ3jSW92JJKraxqAuuBuYqdOX749MunClDsLqWfw1YHo2OlpmqnlDCDqRIRltp7ObGJ8e2rQGx+Sg7VA==}
     engines: {node: '>=22.18.0'}
 
   prelude-ls@1.2.1:
@@ -1714,7 +1714,7 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@pob/eslint-config@68.0.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.12.0))(@typescript/typescript6@6.0.2)(eslint@10.12.0)':
+  '@pob/eslint-config@68.1.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.12.0))(@typescript/typescript6@6.0.2)(eslint@10.12.0)':
     dependencies:
       '@eslint/json': 2.1.1
       '@pob/eslint-plugin': 67.0.0(@typescript/typescript6@6.0.2)(eslint@10.12.0)
@@ -1738,12 +1738,12 @@ snapshots:
     optionalDependencies:
       typescript: '@typescript/typescript6@6.0.2'
 
-  '@pob/root@28.2.2':
+  '@pob/root@28.3.0':
     dependencies:
       '@commitlint/format': 21.2.3
       '@commitlint/lint': 21.2.4
       '@commitlint/types': 21.2.3
-      '@pob/version': 8.2.0
+      '@pob/version': 8.3.0
       conventional-changelog-conventionalcommits: 10.4.1
       conventional-changelog-writer: 9.3.0
       conventional-commits-parser: 7.1.3
@@ -1753,13 +1753,13 @@ snapshots:
       oxlint: 1.85.0(oxlint-tsgolint@7.0.2003)
       oxlint-tsgolint: 7.0.2003
       picomatch: 4.0.7
-      pob-dependencies: 28.2.0
+      pob-dependencies: 28.3.0
       semver: 7.8.5
     transitivePeerDependencies:
       - svelte
       - vite-plus
 
-  '@pob/version@8.2.0':
+  '@pob/version@8.3.0':
     dependencies:
       commander: 14.0.3
       conventional-changelog-conventionalcommits: 10.4.1
@@ -2487,7 +2487,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@28.2.0: {}
+  pob-dependencies@28.3.0: {}
 
   prelude-ls@1.2.1: {}
 
