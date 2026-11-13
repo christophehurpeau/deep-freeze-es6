@@ -12,8 +12,8 @@ importers:
         specifier: 68.4.0
         version: 68.4.0(@typescript-eslint/utils@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.14.0))(@typescript/typescript6@6.0.2)(eslint@10.14.0)(ts-declaration-location@1.0.7(@typescript/typescript6@6.0.2))
       '@pob/root':
-        specifier: 28.6.0
-        version: 28.6.0
+        specifier: 28.7.0
+        version: 28.7.0
       '@typescript/native':
         specifier: npm:typescript@7.0.2
         version: typescript@7.0.2
@@ -455,14 +455,14 @@ packages:
       typescript:
         optional: true
 
-  '@pob/root@28.6.0':
-    resolution: {integrity: sha512-gxzNAwWVs4wGWUq7HAfXSOkOp04irITVAz2cMFpMIjt0WjA9RvTwYyvgrRDopU5ub5uxTmnQw5Q2dZCcO0CfKA==}
-    engines: {node: ^22.18.0 || >=24.14.1}
+  '@pob/root@28.7.0':
+    resolution: {integrity: sha512-bbR8+CMkRsxc6LYSoKEpJk68qNse3Re8m9aBTUyn3vZN33tzY4HHIAqNZEeW5fW/IffiGTHhuxTWnzX7nkjLIA==}
+    engines: {node: ^22.23.4 || ^24.22.1 || >=26.13.0}
     hasBin: true
 
-  '@pob/version@8.4.0':
-    resolution: {integrity: sha512-FSp3YaMCO5vj9hooyRs57ogDCYDfBwO4UH+rODOyoOs4stfhvxNQyB6g54Lmfj9k7pZCPZbcTX01g7DqgzvjXA==}
-    engines: {node: '>=24.14.1'}
+  '@pob/version@8.5.0':
+    resolution: {integrity: sha512-bF2jO6YNySiQQfoDcNnsFEVXcpYMXqoeKR8ut2p+/VsIOOoHqtSwmft4mzfooA/E2i9stMJLnZqo+MZ1KfR97A==}
+    engines: {node: ^24.22.1 || >=26.13.0}
     hasBin: true
 
   '@simple-libs/stream-utils@2.0.0':
@@ -914,9 +914,9 @@ packages:
     resolution: {integrity: sha512-77PSwercCZU2Fc4sX94eF8k8Pxte6JAwL4/ICZLFjJLqegs7kCuAsqqj/70NQF6TvDpgFjkubQB2FW2ZZddvQg==}
     engines: {node: '>=8'}
 
-  commander@14.0.3:
-    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
-    engines: {node: '>=20'}
+  commander@15.0.0:
+    resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
+    engines: {node: '>=22.12.0'}
 
   comment-parser@1.4.7:
     resolution: {integrity: sha512-0h+uSNtQGW3D98eQt3jJ8L06Fves8hncB4V/PKdw/Qb8Hnk19VaKuTr55UNRYiSoVa7WwrFls+rh3ux9agmkeQ==}
@@ -1417,9 +1417,9 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@28.6.0:
-    resolution: {integrity: sha512-dTGptTqvZlUwAE/auf+3CWFaMqCNjHmVEhv2fVJEsJh6xuIYooJxCJmS9dCVZrCLBpWKeNvP1m8LPJ+ae/ob/w==}
-    engines: {node: ^22.18.0 || >=24.14.1}
+  pob-dependencies@28.7.0:
+    resolution: {integrity: sha512-Ddxx42gxxLLHGeOVwhbsRa+w8BHnod4zc4IMOv5SSga+ZWLhtIpbP0OvUDbYQNDiFe3l8i7pbZynHosSbh+Qng==}
+    engines: {node: ^22.23.4 || ^24.22.1 || >=26.13.0}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -1894,12 +1894,12 @@ snapshots:
     optionalDependencies:
       typescript: '@typescript/typescript6@6.0.2'
 
-  '@pob/root@28.6.0':
+  '@pob/root@28.7.0':
     dependencies:
       '@commitlint/format': 21.2.3
       '@commitlint/lint': 21.2.4
       '@commitlint/types': 21.2.3
-      '@pob/version': 8.4.0
+      '@pob/version': 8.5.0
       conventional-changelog-conventionalcommits: 10.4.1
       conventional-changelog-writer: 9.3.0
       conventional-commits-parser: 7.1.3
@@ -1909,16 +1909,16 @@ snapshots:
       oxlint: 1.90.0(oxlint-tsgolint@7.0.2005)
       oxlint-tsgolint: 7.0.2005
       picomatch: 4.0.7
-      pob-dependencies: 28.6.0
+      pob-dependencies: 28.7.0
       semver: 7.8.5
     transitivePeerDependencies:
       - '@astrojs/compiler-rs'
       - svelte
       - vite-plus
 
-  '@pob/version@8.4.0':
+  '@pob/version@8.5.0':
     dependencies:
-      commander: 14.0.3
+      commander: 15.0.0
       conventional-changelog-conventionalcommits: 10.4.1
       conventional-changelog-preset-loader: 6.0.1
       conventional-changelog-writer: 9.3.0
@@ -2271,7 +2271,7 @@ snapshots:
 
   ci-info@4.4.0: {}
 
-  commander@14.0.3: {}
+  commander@15.0.0: {}
 
   comment-parser@1.4.7: {}
 
@@ -2867,7 +2867,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@28.6.0: {}
+  pob-dependencies@28.7.0: {}
 
   prelude-ls@1.2.1: {}
 
