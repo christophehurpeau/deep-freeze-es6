@@ -47,10 +47,10 @@
     "tsc:go": "tsc && tsc -p tsconfig.tools.json"
   },
   "devDependencies": {
-    "@pob/eslint-config": "68.5.0",
-    "@pob/root": "28.8.1",
+    "@pob/eslint-config": "68.6.0",
+    "@pob/root": "28.9.0",
     "@typescript/native": "npm:typescript@7.0.2",
-    "eslint": "10.14.0",
+    "eslint": "10.15.0",
     "tsrs": "0.25.0-ts7.1.0-beta",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
